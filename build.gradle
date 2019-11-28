@@ -28,3 +28,21 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.11'
 }
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'edu.sc.seis.gradle:launch4j:2.4.6'
+  }
+}
+
+repositories {
+  jcenter()
+}
+
+apply plugin: 'edu.sc.seis.launch4j'
+
+launch4j {
+  mainClassName = 'com.example.myapp.Start'
+}
